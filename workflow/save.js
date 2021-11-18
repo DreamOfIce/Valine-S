@@ -84,7 +84,7 @@ await $respond({
 //获取标题
 console.log("在数据库中查找网页标题")
 const query = new AV.query("Title");
-query.equalTo(ct.url);
+query.equalTo('url',ct.url);
 const title = await query.first();
 if (!title) {
     console.log("找不到网页标题,开始获取")
